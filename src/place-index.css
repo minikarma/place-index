@@ -3,7 +3,7 @@
 #map { position: absolute; top: 0; bottom: 0; left: 0; width: 100%; }
 
 #panel {
-  width: 160px;
+  width: 260px;
   line-height: 28px;
   padding: 6px 12px;
   display: block;
@@ -25,6 +25,8 @@
   font-size: 15px;
 }
 
+.noUi-connect { opacity: 0; }
+
 /* The slider itself */
 .slider {
     -webkit-appearance: none;  /* Override default CSS styles */
@@ -37,6 +39,31 @@
     -webkit-transition: .2s; /* 0.2 seconds transition on hover */
     transition: opacity .2s;
 }
+
+.sliders input {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  z-index: 5000;
+}
+
+#slider-two {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  top: -28px;
+}
+
+.slider::-moz-range-track,
+.slider::-webkit-slider-runnable-track {
+  border: 1px solid #ff0000;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+input[type=range]::-moz-range-track
+
+
 
 /* Mouse-over effects */
 .slider:hover {

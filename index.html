@@ -6,10 +6,12 @@
     <title>Urban Environment Index</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="slider/nouislider.js"></script>
     <script src='https://npmcdn.com/@turf/turf@3.5.1/turf.min.js'></script>
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />
     <link href='src/place-index.css' rel='stylesheet' />
+    <link href='slider/nouislider.css' rel='stylesheet' />
 </head>
 
 <body>
@@ -18,26 +20,23 @@
     <div id='panel'>
       <div>
         <div class="slider-header">
-          <div class="slider-title">Растительность</div>
-          <div class="slider-value" id="slider-value-vegetation"></div>
+          <div class="slider-title">Озеленение</div>
+          <div class="slider-value" id="slider-value-green"></div>
         </div>
-        <div><input class="slider" id="slider-vegetation" type="range" min="1" max="100" value="25" /></div>
-
-        <div class="slider-header">
-          <div class="slider-title">Воздух</div>
-          <div class="slider-value" id="slider-value-air"></div>
-        </div>
-        <div><input class="slider" id="slider-air" type="range" min="1" max="100" value="50" /></div>
-
         <div class="slider-header">
           <div class="slider-title">Транспорт</div>
           <div class="slider-value" id="slider-value-transport"></div>
         </div>
-        <div><input class="slider" id="slider-transport" type="range" min="1" max="100" value="25" /></div>
+        <div class="slider-header">
+          <div class="slider-title">Воздух</div>
+          <div class="slider-value" id="slider-value-air"></div>
+        </div>
+        <div style="margin-top: 16px; margin-bottom: 16px;" id="slider-area"></div>
       </div>
     </div>
 
-    <script src="src/place-index.js"></script>
+    <script src="src/place-index-one.js"></script>
+
 </body>
 
 </html>
