@@ -116,7 +116,7 @@ setParamValue = (param,value) => {
     }
   });
 
-  console.log(recalculatedFeatures);
+//  console.log(recalculatedFeatures);
 
   //recalculate data
   map.getSource("bld").setData({type: "FeatureCollection", features: recalculatedFeatures });
